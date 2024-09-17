@@ -1,0 +1,30 @@
+version: 2.2
+pipelines:
+  - id: profile-to-postgres
+    status: running
+    connectors:
+# [CONNECTOR] SOURCE
+      - id: dynamo-source
+        type: source
+        plugin: standalone:dynamodb
+        settings:
+          aws.region: us-east-2
+          table: users
+          key: id
+          aws.accessKeyId: ""
+          aws.secretAccessKey: ""
+# [CONNECTOR] DESTINATION
+      - id: postgres-sink
+        type: destination
+        plugin: builtin:postgres
+        settings:
+         url: ""
+         table: profile
+# [CONNECTOR] DESTINATION
+      - id: log-sink
+        type: destination
+        plugin: builtin:log
+# [PROCESSORS]
+    processors:
+      - id: profile-processor
+        plugin: standalone:profile-processor

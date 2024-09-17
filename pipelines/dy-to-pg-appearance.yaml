@@ -1,0 +1,30 @@
+version: 2.2
+pipelines:
+  - id: appearance-to-postgres
+    status: running
+    connectors:
+# [CONNECTOR] SOURCE
+      - id: dynamo-source
+        type: source
+        plugin: standalone:dynamodb
+        settings:
+          aws.region: us-east-2
+          table: users
+          key: id
+          aws.accessKeyId: ""
+          aws.secretAccessKey: ""
+# [CONNECTOR] DESTINATION
+      - id: postgres-sink
+        type: destination
+        plugin: builtin:postgres
+        settings:
+         url: ""
+         table: appearance_settings
+# [CONNECTOR] DESTINATION
+      - id: log-sink
+        type: destination
+        plugin: builtin:log
+# [PROCESSORS]
+    processors:
+      - id: appearance-processor
+        plugin: standalone:appearance-processor

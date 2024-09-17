@@ -1,0 +1,99 @@
+{
+    "key": {
+        "id": "18ab7665-ae34-47e6-af14-3d6595580562"
+    },
+    "metadata": {
+        "conduit.source.connector.id": "dyanmo-to-postgres:dynamo-source",
+        "opencdc.collection": "users",
+        "opencdc.key.schema.subject": "dyanmo-to-postgres:dynamo-source:users.key",
+        "opencdc.key.schema.version": "1",
+        "opencdc.payload.schema.subject": "dyanmo-to-postgres:dynamo-source:users.payload",
+        "opencdc.payload.schema.version": "1",
+        "opencdc.readAt": "1725556724234998000"
+    },
+    "operation": "snapshot",
+    "payload": {
+        "after": {
+            "accessibility": {
+                "stackSwipeDirection": "left"
+            },
+            "allowCodes": true,
+            "appearance": {
+                "colorway": "SkyBlue",
+                "mode": "Dark"
+            },
+            "bio": "gynqcunecnswylvigxqm",
+            "birthdate": "2000-07-11",
+            "brew": [
+                "sports",
+                "sports",
+                "sports",
+                "pop_culture"
+            ],
+            "contentSetting": "",
+            "country": "",
+            "createdAt": "2024-09-05T17:16:20.382266Z",
+            "email": "obsah@example.com",
+            "ethnicity": "black/african descent",
+            "followers": "90",
+            "followersCount": "31",
+            "following": "51",
+            "followingCount": "10",
+            "gender": "",
+            "handle": "zjdwykrriq",
+            "id": "18ab7665-ae34-47e6-af14-3d6595580562",
+            "imageUrl": "https://example.com/249f6d0e-a5f5-45f0-95bf-8cd5fa7d07e4/image.jpg",
+            "lastUpdated": "",
+            "likesCount": "29",
+            "location": "The TVA",
+            "memberTour": {
+                "appIntro": "9",
+                "compose": "2",
+                "details": "6",
+                "explore": "4",
+                "profile": "4",
+                "teaPartyLive": "2",
+                "teaPartyLobby": "6",
+                "teaPartyVideo": "8",
+                "welcome": "accepted"
+            },
+            "name": "smexkx asohol",
+            "notifications": [
+                "Follows",
+                "Comments",
+                "Quotes",
+                "Likes",
+                "Mentions",
+                "TeaPartyReply",
+                "TeaPartyInvites",
+                "SpadeGameInvites",
+                "GameReply"
+            ],
+            "onboardingStep": "completed",
+            "phone": "+6398279318639",
+            "phoneOptOut": false,
+            "pronouns": [
+                {
+                    "order": "0",
+                    "pronoun": "he"
+                },
+                {
+                    "order": "1",
+                    "pronoun": "him"
+                },
+                {
+                    "order": "2",
+                    "pronoun": "his"
+                }
+            ],
+            "repScore": "5",
+            "spillCount": "365",
+            "tos": "accepted",
+            "userType": "Admin",
+            "website": "https://tdy.lol/qgaxva",
+            "zipCode": "88981"
+        },
+        "before": null
+    },
+    "position": "MThhYjc2NjUtYWUzNC00N2U2LWFmMTQtM2Q2NTk1NTgwNTYyX2M="
+}

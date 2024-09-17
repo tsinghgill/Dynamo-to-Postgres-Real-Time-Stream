@@ -1,0 +1,25 @@
+version: 2.2
+pipelines:
+  - id: profile-to-postgres
+    status: running
+    connectors:
+# [CONNECTOR] SOURCE
+      - id: dynamo-source
+        type: source
+        plugin: standalone:dynamodb
+        settings:
+          aws.region: us-east-2
+          table: users
+          key: id
+          aws.accessKeyId: ${AWS_ACCESS_KEY_ID}
+          aws.secretAccessKey: ${AWS_SECRET_ACCESS_KEY}
+# [CONNECTOR] DESTINATION
+      - id: log-sink
+        type: destination
+        plugin: builtin:log
+# [PROCESSORS]
+    processors:
+      - id: example
+        plugin: "base64.encode"
+        settings:
+          field: ".Payload.After.name" # ".Key.id"
